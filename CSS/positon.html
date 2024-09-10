@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS position</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box {
+            height: 420px;
+            width: 80vw;
+            border: 3px solid black;
+            margin: 4px;
+            padding: 45px
+        }
+
+        .box1 {
+            background-color: aqua;
+            position:absolute;
+             /*If we use absolute postion it will releate the nearest positioned parent*/
+             /* position: sticky;*/
+             /* top:23px;*/
+             /* height: 120px;
+             width: 82vw; */
+             top:0px;
+             left:3px;
+            /* margin: 0;
+            padding: 0;  */
+
+        }
+
+        .box2 {
+            background-color: azure;
+            /* position: relative;
+            top:50px;
+            left:34px */
+        }
+
+        .box3 {
+            background-color: blue;
+            /* position: fixed;
+            bottom: 20px;
+            left:20vw; */
+        }
+
+        .box4 {
+            background-color: brown;
+        }
+
+        .parent{
+            padding:34px;
+            margin:43px;
+            border:4px solid red;
+            /* position:absolute; */
+            /* top:0px; --the parent is positioned now so it will relate parent class */
+            /* Exception: transform, filter, or perspective properties can also make an element appear as positioned */
+            /* transform: translate(0); */
+            /* filter: invert(0); */
+            perspective: 0em;
+        }
+    </style>
+</head>
+
+<body>
+<div class="parent">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+</div>  
+</body>
+
+</html>

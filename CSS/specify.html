@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* a) Universal Selector: 0
+    b) Element selectors and pseudo-elements: 1
+    c) Class selectors, attribute selectors, and pseudo-classes: 10
+    d) ID selectors: 100
+    e) Inline styles: 1000 */
+
+    /* specifity of this selector is 1 */
+    h1 {
+        color: aqua;
+    }
+
+    /* specifity of this selector is 10+1=11 ,1 is for h1*/
+    h1.cred {
+        color: red;
+    }
+
+    /* specifity of this selector is 10 */
+    .cyellow {
+        color: yellow
+            /* if important msg is there its priority is more */
+    }
+
+    /* specifity of this selector is 10 */
+    .cblue {
+        color: blue
+    }
+
+    /* specifity of this selector is 1(element)+10(class-harry)+10
+    (class-rohan)+10(attribute)+10(pseudo selector)=41 */
+    a.harryclass.rohan-class[href]:hover {
+        color: green;
+    }
+
+    /* specifity of this selector is 10 */
+    /* [data-a=e]{
+        background-color: brown;
+    } */
+</style>
+
+<body>
+    <h1 class="cred cyellow cblue" data-a="e">CSS specify</h1>
+</body>
+
+</html>

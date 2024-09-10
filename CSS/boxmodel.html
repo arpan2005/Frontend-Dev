@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box model</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .a{
+        background-color: yellow;
+    }
+    .a1{
+        color:blue;
+        padding: 10px;
+        margin: 25px;
+        border: 2px solid red;
+        height: 200px;
+        box-sizing: border-box;
+         /* it means the total height = border + padding */
+    }   
+    .a2{
+        color:crimson;
+        padding: 10px;
+        margin: 25px;
+        border: 2px solid black;
+        height: 200px;
+        box-sizing: border-box;
+        /* margin collapse means if we give two different margin size the maz size of the margin will be applied */
+    }
+</style>
+<body>
+    <div class="a a1">I am a Devil of my world</div>
+    <div class="a a2">Do smart work not hard</div>
+</body>
+</html>
